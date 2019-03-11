@@ -1,0 +1,20 @@
+{
+  "id": "{A86BAC56-7DD0-4232-A13D-6CDE5FDD0708}",
+  "name": "HomeConnectDevice",
+  "type": 3,
+  "vendor": "HomeConnect GmbH",
+  "aliases": [
+    "HomeConnect"
+  ],
+  "parentRequirements": [
+    "{79827379-F36E-4ADA-8A95-5F8D1DC92FA9}"
+  ],
+  "childRequirements": [
+    "{018EF6B5-AB94-40C6-AA53-46943E824ACF}"
+  ],
+  "implemented": [
+    "{018EF6B5-AB94-40C6-AA53-46943E824ACF}",
+    "{79827379-F36E-4ADA-8A95-5F8D1DC92FA9}"
+  ],
+  "prefix": "HomeConnectDevice"
+}
