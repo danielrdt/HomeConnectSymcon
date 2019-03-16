@@ -532,6 +532,14 @@ class HomeConnectConstants
     const LaundryCare_Washer_Program_Mix = 'Mix';
     const LaundryCare_Washer_Program_DelicatesSilk = 'Delicates Silk';
     const LaundryCare_Washer_Program_Wool = 'Wool';
+    const LaundryCare_Washer_Program_DarkWash = 'Dark Wash';
+    const LaundryCare_Washer_Program_ShirtsBlouses = 'Shirts Blouses';
+    const LaundryCare_Washer_Program_WaterProof = 'Water Proof';
+    const LaundryCare_Washer_Program_Auto30 = 'Auto 30';
+    const LaundryCare_Washer_Program_Auto40 = 'Auto 40';
+    const LaundryCare_Washer_Program_Auto60 = 'Auto 60';
+    const LaundryCare_Washer_Program_Sensitive = 'Sensitive';
+    const LaundryCare_Washer_Program_Curtains = 'Curtains';
 
     // temperature
     const LaundryCare_Washer_Option_Temperature = [
@@ -673,6 +681,14 @@ class HomeConnectConstants
         ]
     ];
 
+    const LaundryCare_Washer_Option_Stains = 'Stains';
+    const LaundryCare_Washer_Option_RinsePlus = 'Rinse Plus';
+    const LaundryCare_Washer_Option_Prewash = 'Prewash';
+    const LaundryCare_Washer_Option_VarioPerfect = 'VarioPerfect';
+    const LaundryCare_Washer_Option_IDos1DosingLevel = 'IDos1DosingLevel';
+    const LaundryCare_Washer_Option_IDos2DosingLevel = 'IDos2DosingLevel';
+    const LaundryCare_Washer_Option_LessIroning = 'Less Ironing';
+
     /**
      * Hood
      */
@@ -727,6 +743,13 @@ class HomeConnectConstants
             'BSH.Common.Option.ProgramProgress' => 0,
             'LaundryCare.Washer.Option.Temperature' => 'LaundryCare.Washer.EnumType.Temperature.GC40',
             'LaundryCare.Washer.Option.SpinSpeed' => 'LaundryCare.Washer.EnumType.SpinSpeed.RPM1400'
+            'LaundryCare.Washer.Option.Stains' => 0,
+            'LaundryCare.Washer.Option.RinsePlus' => 0,
+            'LaundryCare.Washer.Option.Prewash' => 0,
+            'LaundryCare.Washer.Option.LessIroning' => 0,
+            'LaundryCare.Washer.Option.IDos2DosingLevel' => 0,
+            'LaundryCare.Washer.Option.IDos1DosingLevel' => 0,
+            'LaundryCare.Common.Option.VarioPerfect' => 0
         ],
         'Dryer' => [
             'Start Device' => false,
