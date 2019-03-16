@@ -155,15 +155,34 @@ class HomeConnect extends Module
                     // get default settings
                     $settings = HomeConnectConstants::settings($device['type']);
 
+                    // attach all available options
+                    if (!in_array($device['type'], ['FridgeFreezer'])) {
+                        if ($options = $this->Api('homeappliances/' . $device['haId'] . '/programs/selected/options')) {
+                            $this->_log('HomeConnect Options', $options);
+                            foreach ($options AS $option) {
+                                $name = $state['name'];
+                                $map = $this->_map($device['type'], $option);
+
+                                // append settings
+                                $this->devices[$device['haId']]['Settings'][] = [
+                                    'key' => $map['key'],
+                                    'value' => is_string($map['value']) ? $this->Translate($map['value']) : $map['value'],
+                                    'custom_profile' => isset($map['custom_profile']) ? [
+                                        'values' => $map['custom_profile']
+                                    ] : false,
+                                    'name' => $name
+                                ];
+                            }
+                        }
+                    }
+                    $this->_log('HomeConnect Options', $this->devices[$device]);
                     // merge with current settings
                     if ($current_settings = $this->Api('homeappliances/' . $device['haId'] . '/settings')) {
                         $settings = $this->_mergeSettings($settings, $current_settings);
                     }
-                    $this->_log('HomeConnect Settings', $current_settings);
 
                     // attach settings
                     foreach ($settings AS $setting) {
-                        //$name = $current_settings['name'];
                         $map = $this->_map($device['type'], $setting);
 
                         // append settings
@@ -172,8 +191,7 @@ class HomeConnect extends Module
                             'value' => is_string($map['value']) ? $this->Translate($map['value']) : $map['value'],
                             'custom_profile' => isset($map['custom_profile']) ? [
                                 'values' => $map['custom_profile']
-                            ] : false,
-                            //'name' => $name
+                            ] : false
                         ];
                     }
 
