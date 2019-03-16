@@ -745,6 +745,10 @@ class HomeConnectDevice extends Module
                     'caption' => 'enable logging'
                 ],
                 [
+                    'type' => 'Label',
+                    'label' => '___ [ Settings ] _______________________________________________________________________________________'
+                ],
+                [
                     'name' => 'settings',
                     'type' => 'ValidationTextBox',
                     'caption' => 'Settings'
@@ -752,7 +756,7 @@ class HomeConnectDevice extends Module
                 [
                     'name' => 'io',
                     'type' => 'ValidationTextBox',
-                    'caption' => 'IO Variable'
+                    'caption' => 'HomeConnect Symcon-Id'
                 ]
             ];
         }
