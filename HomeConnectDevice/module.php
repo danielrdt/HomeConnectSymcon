@@ -580,7 +580,7 @@ class HomeConnectDevice extends Module
      */
     private function WaitForResponse(int $State)
     {
-        for ($i = 0; $i < 800; $i++) {
+        for ($i = 0; $i < 500; $i++) {
             if ($this->State == $State) {
                 $Handshake = $this->Handshake;
                 $this->Handshake = '';
@@ -704,4 +704,92 @@ class HomeConnectDevice extends Module
             'Open' => true
         ]);
     }
+
+
+    /***********************************************************
+     * Configuration Form
+     ***********************************************************/
+    /**
+     * build configuration form
+     * @return string
+     */
+    public function GetConfigurationForm()
+    {
+        // return current form
+        return json_encode([
+            'elements' => $this->FormHead(),
+            'actions' => $this->FormActions(),
+            'status' => $this->FormStatus()
+        ]);
+    }
+
+    /**
+     * return form configurations on configuration step
+     * @return array
+     */
+    protected function FormHead()
+    {
+
+        $formHead = array_merge(
+            $formHead,
+            [
+                [
+                    'type' => 'Label',
+                    'label' => '___ [ Logging ] ________________________________________________________________________________________'
+                ],
+                [
+                    'name' => 'log',
+                    'type' => 'CheckBox',
+                    'caption' => 'enable logging'
+                ]
+            ]
+        );
+
+        return $formHead;
+    }
+
+    /**
+     * return form actions
+     * @return array
+     */
+    protected function FormActions()
+    {
+
+        // show buttons, depending on current configuration
+        {
+            return [
+                [
+                    'type' => 'Button',
+                    'label' => 'Connect Event',
+                    'onClick' => $this->_getPrefix() . '_ConnectEvent($id, true)',
+                ]
+            ];
+        }
+    }
+
+    /**
+     * return from status
+     * @return array
+     */
+    protected function FormStatus()
+    {
+        return [
+            [
+                'code' => 101,
+                'icon' => 'inactive',
+                'caption' => 'Please login'
+            ],
+            [
+                'code' => 102,
+                'icon' => 'active',
+                'caption' => 'HomeConnectDevice connection has been established!'
+            ],
+            [
+                'code' => 201,
+                'icon' => 'inactive',
+                'caption' => 'Error: Could not connect to HomeConnectModule!'
+            ]
+        ];
+    }
+}
 }

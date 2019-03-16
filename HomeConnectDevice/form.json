@@ -1,16 +1,2 @@
 {
-  "elements": [
-    {
-      "type": "CheckBox",
-      "name": "log",
-      "caption": "enable logging"
-    }
-  ],
-  "actions": [
-    {
-      "type": "Button",
-      "label": "Connect Event",
-      "onClick": "HomeConnectDevice_ConnectEvent($id, true);"
-    }
-  ]
 }

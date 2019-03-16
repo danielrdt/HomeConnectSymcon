@@ -5,6 +5,8 @@
       "On": "An",
       "Off": "Aus",
       "enable logging": "Log Meldungen aktivieren",
+      "HomeConnectDevice connection has been established!": "HomeConnectDevice wurde verbunden!",
+      "Error: Could not connect to HomeConnectModule!": "Keine Verbindung zum HomeConnectModule!",
       "Cotton": "Baumwolle",
       "Synthetic": "Synthetik",
       "Mix": "Gemischt",
