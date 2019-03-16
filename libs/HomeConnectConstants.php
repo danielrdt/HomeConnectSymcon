@@ -856,13 +856,13 @@ class HomeConnectConstants
             'BSH.Common.Option.ProgramProgress' => 0,
             'LaundryCare.Washer.Option.Temperature' => 'LaundryCare.Washer.EnumType.Temperature.GC40',
             'LaundryCare.Washer.Option.SpinSpeed' => 'LaundryCare.Washer.EnumType.SpinSpeed.RPM1400',
-            'LaundryCare.Washer.Option.Stains' => 0,
-            'LaundryCare.Washer.Option.RinsePlus' => 0,
+            'LaundryCare.Washer.Option.Stains' => 'LaundryCare.Washer.EnumType.Stains.Off',
+            'LaundryCare.Washer.Option.RinsePlus' => 'LaundryCare.Washer.EnumType.RinsePlus.Off',
             'LaundryCare.Washer.Option.Prewash' => 0,
             'LaundryCare.Washer.Option.LessIroning' => 0,
-            'LaundryCare.Washer.Option.IDos2DosingLevel' => 0,
-            'LaundryCare.Washer.Option.IDos1DosingLevel' => 0,
-            'LaundryCare.Common.Option.VarioPerfect' => 0,
+            'LaundryCare.Washer.Option.IDos2DosingLevel' => 'LaundryCare.Washer.EnumType.IDosingLevel.Normal',
+            'LaundryCare.Washer.Option.IDos1DosingLevel' => 'LaundryCare.Washer.EnumType.IDosingLevel.Normal',
+            'LaundryCare.Common.Option.VarioPerfect' => 'LaundryCare.Commmon.EnumType.VarioPerfect.SpeedPerfect',
             'BSH.Common.Option.FinishInRelative'  => 0
         ],
         'Dryer' => [
