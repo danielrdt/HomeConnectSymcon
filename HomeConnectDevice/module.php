@@ -377,7 +377,7 @@ class HomeConnectDevice extends Module
                             break;
                         // update Option variables
                         case 'BSH.Common.Root.ActiveProgram';
-                        //case 'BSH.Common.Option.RemainingProgramTime';
+                        case 'BSH.Common.Option.RemainingProgramTime';
                             $this->CheckOptions($this->haId);
                         default:
                             $callbacks = HomeConnectConstants::callbacks;
