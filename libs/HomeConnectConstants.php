@@ -13,19 +13,19 @@ class HomeConnectConstants
                 'value' => [
                     'name' => 'Off',
                     'value' => 0
-                ]/*,
+                ],
                 'availability' => [
                     'Dishwasher',
                     'Top',
                     'Hood'
-                ]*/
+                ]
             ],
             'BSH.Common.EnumType.PowerState.On' => [
                 'value' => [
                     'name' => 'On',
                     'value' => 1,
                 ]
-            ]/*,
+            ],
             'BSH.Common.EnumType.PowerState.Standby' => [
                 'value' => [
                     'name' => 'Standby',
@@ -35,7 +35,7 @@ class HomeConnectConstants
                     'Oven',
                     'CoffeeMaker'
                 ]
-            ]*/
+            ]
         ]
     ];
 
@@ -693,9 +693,9 @@ class HomeConnectConstants
             'BSH.Common.Option.StartInRelative' => 0 ,
             'BSH.Common.Option.EnergyForecast'  => 0,
             'BSH.Common.Option.WaterForecast'  => 0,
-            'Dishcare.Dishwasher.Option.IntensivZone'  => 0,
-            'Dishcare.Dishwasher.Option.VarioSpeedPlus'  => 0,
-            'Dishcare.Dishwasher.Option.BrillianceDry' => 0
+            //'Dishcare.Dishwasher.Option.IntensivZone'  => 0,
+            //'Dishcare.Dishwasher.Option.VarioSpeedPlus'  => 0,
+            //'Dishcare.Dishwasher.Option.BrillianceDry' => 0
         ],
         'Hood' => [
             'Start Device' => false,
