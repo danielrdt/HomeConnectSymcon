@@ -162,6 +162,7 @@ class HomeConnect extends Module
 
                     // attach settings
                     foreach ($settings AS $setting) {
+                        $name = $setting['name'];
                         $map = $this->_map($device['type'], $setting);
 
                         // append settings
@@ -171,7 +172,7 @@ class HomeConnect extends Module
                             'custom_profile' => isset($map['custom_profile']) ? [
                                 'values' => $map['custom_profile']
                             ] : false,
-                            //'name' => $map['name']
+                            'name' => $name
                         ];
                     }
 
@@ -179,6 +180,7 @@ class HomeConnect extends Module
                     if ($states = $this->Api('homeappliances/' . $device['haId'] . '/status')) {
                         if (isset($states) && is_array($states)) {
                             foreach ($states AS $state) {
+                                $name = $state['name'];
                                 $map = $this->_map($device['type'], $state);
                                     $this->devices[$device['haId']]['Settings'][] = [
                                     'key' => $map['key'],
@@ -186,7 +188,7 @@ class HomeConnect extends Module
                                     'custom_profile' => isset($map['custom_profile']) ? [
                                         'values' => $map['custom_profile']
                                     ] : false,
-                                    //'name' => $map['name']
+                                    'name' => $name
                                 ];
                             }
                         }
@@ -217,7 +219,7 @@ class HomeConnect extends Module
                                         'icon' => 'Script',
                                         'values' => $device_programs
                                     ],
-                                    //'name' => $this->Translate('Program')
+                                    'name' => $this->Translate('Program')
                                 ];
                             }
                         }
