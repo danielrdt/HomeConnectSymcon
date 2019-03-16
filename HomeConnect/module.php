@@ -160,7 +160,7 @@ class HomeConnect extends Module
                         if ($options = $this->Api('homeappliances/' . $device['haId'] . '/programs/selected/options')) {
                             $this->_log('HomeConnect Options', $options);
                             foreach ($options AS $option) {
-                                $name = $state['name'];
+                                $name = $option['name'];
                                 $map = $this->_map($device['type'], $option);
 
                                 // append settings
@@ -175,7 +175,7 @@ class HomeConnect extends Module
                             }
                         }
                     }
-                    $this->_log('HomeConnect Options', $this->devices[$device]);
+                    $this->_log('HomeConnect Options', $this->devices[$device['haId']]['Settings']);
                     // merge with current settings
                     if ($current_settings = $this->Api('homeappliances/' . $device['haId'] . '/settings')) {
                         $settings = $this->_mergeSettings($settings, $current_settings);
