@@ -346,7 +346,6 @@ class HomeConnectDevice extends Module
                                 $actions = array_flip($device_settings[$action_key]);
                                 $value = isset($actions[$item['value']]) ? $actions[$item['value']] : 0;
                             }
-
                             // set value
                             if (!is_null($value)) {
                                 SetValue($this->GetIDForIdent($ident), $value);
@@ -357,10 +356,7 @@ class HomeConnectDevice extends Module
                     if ($item['key'] == 'BSH.Common.Option.StartInRelative' && $item['value'] == 0) {
                         $this->ProcessStartCallback();
                     }
-                    // update options
-                    if ($item['key'] == 'BSH.Common.Root.ActiveProgram') {
-                        $this->CheckVariables();
-                    }
+
                     // update item event key on finished / aborted state
                     if ($item['key'] == 'BSH.Common.Status.OperationState') {
                         if ($item['value'] == 'BSH.Common.EnumType.OperationState.Finished') {
@@ -379,6 +375,10 @@ class HomeConnectDevice extends Module
                         case 'BSH.Common.Setting.PowerState';
                             $this->CheckVariables();
                             break;
+                        // update Option variables
+                        case 'BSH.Common.Root.ActiveProgram';
+                        //case 'BSH.Common.Option.RemainingProgramTime';
+                            $this->CheckOptions($this->haId);
                         default:
                             $callbacks = HomeConnectConstants::callbacks;
                             if (isset($callbacks[$item['key']])) {
@@ -614,20 +614,11 @@ class HomeConnectDevice extends Module
     }
 
     /**
-     * Set options
-     * @param string $Value
-     * @return bool|void
-     */
-    public function SetOptions($Ident, $Value)
-    {
-        $Ident = $this->_getIdentifierByNeedle('Option');
-        $this->RequestAction($Ident[0], $Value);
-    }
-
-    /**
      * Request Actions
      * @uses UpdateProgram
-     * @uses UpdateOptions
+     * @uses UpdateBrillianceDry
+     * @uses UpdateVarioSpeedPlus
+     * @uses UpdateIntensivZone
      * @uses UpdateTargetTemperatureRefrigerator
      * @uses UpdateTargetTemperatureFreezer
      * @uses UpdateSuperModeFreezer
