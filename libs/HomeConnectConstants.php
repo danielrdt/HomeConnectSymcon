@@ -690,7 +690,7 @@ class HomeConnectConstants
             'BSH.Common.Setting.PowerState' => 'BSH.Common.EnumType.PowerState.On',
             'BSH.Common.Option.RemainingProgramTime' => 0,
             'BSH.Common.Option.ProgramProgress' => 0,
-            'BSH.Common.Option.StartInRelative' => 0 ,
+            //'BSH.Common.Option.StartInRelative' => 0 ,
             'BSH.Common.Option.EnergyForecast'  => 0,
             'BSH.Common.Option.WaterForecast'  => 0,
             //'Dishcare.Dishwasher.Option.IntensivZone'  => 0,
