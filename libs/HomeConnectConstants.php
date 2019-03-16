@@ -13,19 +13,19 @@ class HomeConnectConstants
                 'value' => [
                     'name' => 'Off',
                     'value' => 0
-                ]/*,
+                ],
                 'availability' => [
                     'Dishwasher',
                     'Top',
                     'Hood'
-                ]*/
+                ]
             ],
             'BSH.Common.EnumType.PowerState.On' => [
                 'value' => [
                     'name' => 'On',
                     'value' => 1,
                 ]
-            ]/*,
+            ],
             'BSH.Common.EnumType.PowerState.Standby' => [
                 'value' => [
                     'name' => 'Standby',
@@ -35,7 +35,7 @@ class HomeConnectConstants
                     'Oven',
                     'CoffeeMaker'
                 ]
-            ]*/
+            ]
         ]
     ];
 
@@ -695,13 +695,112 @@ class HomeConnectConstants
         ]
     ];
 
-    const LaundryCare_Washer_Option_Stains = 'Stains';
-    const LaundryCare_Washer_Option_RinsePlus = 'Rinse Plus';
+    const LaundryCare_Washer_Option_Stains = [
+        'name' => 'Stains',
+        'values' => [
+            'LaundryCare.Washer.EnumType.Stains.Off' => [
+                'value' => [
+                    'name' => 'Off',
+                    'value' => 0
+                ]
+            ],
+            'LaundryCare.Washer.EnumType.Stains.On' => [
+                'value' => [
+                    'name' => 'On',
+                    'value' => 0
+                ]
+            ]
+        ]
+    ];
+    const LaundryCare_Washer_Option_RinsePlus = [
+        'name' => 'Rinse Plus',
+        'values' => [
+            'LaundryCare.Washer.EnumType.RinsePlus.Off' => [
+                'value' => [
+                    'name' => 'Off',
+                    'value' => 0
+                ]
+            ],
+            'LaundryCare.Washer.EnumType.RinsePlus.On' => [
+                'value' => [
+                    'name' => 'On',
+                    'value' => 0
+                ]
+            ]
+        ]
+    ];
     const LaundryCare_Washer_Option_Prewash = 'Prewash';
-    const LaundryCare_Washer_Option_IDos1DosingLevel = 'IDos1DosingLevel';
-    const LaundryCare_Washer_Option_IDos2DosingLevel = 'IDos2DosingLevel';
+    const LaundryCare_Washer_Option_IDos1DosingLevel = [
+        'name' => 'IDos1DosingLevel',
+        'values' => [
+            'LaundryCare.Washer.EnumType.IDosingLevel.Normal' => [
+                'value' => [
+                    'name' => 'Normal',
+                    'value' => 0
+                ]
+            ],
+            'LaundryCare.Washer.EnumType.IDosingLevel.Middle' => [
+                'value' => [
+                    'name' => 'Middle',
+                    'value' => 1
+                ]
+            ],
+            'LaundryCare.Washer.EnumType.IDosingLevel.Strong' => [
+                'value' => [
+                    'name' => 'Strong',
+                    'value' => 2
+                ]
+            ]
+        ]
+    ];
+    const LaundryCare_Washer_Option_IDos2DosingLevel = [
+        'name' => 'IDos2DosingLevel',
+        'values' => [
+            'LaundryCare.Washer.EnumType.IDosingLevel.Normal' => [
+                'value' => [
+                    'name' => 'Normal',
+                    'value' => 0
+                ]
+            ],
+            'LaundryCare.Washer.EnumType.IDosingLevel.Middle' => [
+                'value' => [
+                    'name' => 'Middle',
+                    'value' => 1
+                ]
+            ],
+            'LaundryCare.Washer.EnumType.IDosingLevel.Strong' => [
+                'value' => [
+                    'name' => 'Strong',
+                    'value' => 2
+                ]
+            ]
+        ]
+    ];
+
+    const LaundryCare_Common_Option_VarioPerfect = [
+        'name' => 'VarioPerfect',
+        'values' => [
+            'LaundryCare.Commmon.EnumType.VarioPerfect.SpeedPerfect' => [
+                'value' => [
+                    'name' => 'SpeedPerfect',
+                    'value' => 0
+                ]
+            ],
+            'LaundryCare.Commmon.EnumType.VarioPerfect.SpeedPerfect1' => [
+                'value' => [
+                    'name' => 'SpeedPerfect1',
+                    'value' => 1
+                ]
+            ],
+            'LaundryCare.Commmon.EnumType.VarioPerfect.SpeedPerfect2' => [
+                'value' => [
+                    'name' => 'SpeedPerfect2',
+                    'value' => 2
+                ]
+            ]
+        ]
+    ];
     const LaundryCare_Washer_Option_LessIroning = 'Less Ironing';
-    const LaundryCare_Common_Option_VarioPerfect = 'VarioPerfect';
 
     /**
      * Hood
