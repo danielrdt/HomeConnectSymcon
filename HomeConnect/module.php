@@ -171,7 +171,7 @@ class HomeConnect extends Module
                             'custom_profile' => isset($map['custom_profile']) ? [
                                 'values' => $map['custom_profile']
                             ] : false,
-                            'name' => $map['name']
+                            //'name' => $map['name']
                         ];
                     }
 
@@ -180,14 +180,13 @@ class HomeConnect extends Module
                         if (isset($states) && is_array($states)) {
                             foreach ($states AS $state) {
                                 $map = $this->_map($device['type'], $state);
-
-                                $this->devices[$device['haId']]['Settings'][] = [
+                                    $this->devices[$device['haId']]['Settings'][] = [
                                     'key' => $map['key'],
                                     'value' => is_string($map['value']) ? $this->Translate($map['value']) : $map['value'],
                                     'custom_profile' => isset($map['custom_profile']) ? [
                                         'values' => $map['custom_profile']
                                     ] : false,
-                                    'name' => $map['name']
+                                    //'name' => $map['name']
                                 ];
                             }
                         }
@@ -219,7 +218,7 @@ class HomeConnect extends Module
                                         'icon' => 'Script',
                                         'values' => $device_programs
                                     ],
-                                    'name' => $this->Translate('Program')
+                                    //'name' => $this->Translate('Program')
                                 ];
                             }
                         }
