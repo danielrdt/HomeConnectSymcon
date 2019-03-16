@@ -534,7 +534,30 @@ class HomeConnectConstants
     ];
 
     const LaundryCare_Dryer_Option_Gentle = 'Gentle';
-    const LaundryCare_Dryer_Option_WrinkleGuard = 'Wrinkle Guard';
+
+    const LaundryCare_Dryer_Option_WrinkleGuard = [
+        'name' => 'Wrinkle Guard',
+        'values' => [
+            'LaundryCare.Dryer.EnumType.WrinkleGuard.Min60' => [
+                'value' => [
+                    'name' => '60 min',
+                    'value' => 0
+                ]
+            ],
+            'LaundryCare.Dryer.EnumType.WrinkleGuard.Min120' => [
+                'value' => [
+                    'name' => '120 min',
+                    'value' => 1
+                ]
+            ],
+            'LaundryCare.Dryer.EnumType.WrinkleGuard.Min240' => [
+                'value' => [
+                    'name' => '240 min',
+                    'value' => 2
+                ]
+            ]
+        ]
+    ];
 
     /**
      * Washer

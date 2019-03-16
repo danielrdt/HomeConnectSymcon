@@ -108,13 +108,14 @@
 
       "Dryer": "Trockner",
 
-      "Synthetic": "Synthetik",
+      "Drying Target": "Trockenziel",
+      "Synthetic": "Pflegeleicht",
       "Hygiene": "Hygiene",
       "Super 40": "Super 40",
       "Outdoor": "Outdoor",
-      "Pillow": "Bettwäsche",
-      "Blankets": "Decken",
-      "Business Shirts": "Business/Hemden",
+      "Pillow": "Kopfkissen",
+      "Blankets": "Steppdecken",
+      "Business Shirts": "Hemden/Business",
 
       "Iron Dry": "Bügeltrocken",
       "Cupboard Dry": "Schranktrocken",
