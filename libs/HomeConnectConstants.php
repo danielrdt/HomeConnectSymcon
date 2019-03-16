@@ -742,7 +742,7 @@ class HomeConnectConstants
             'BSH.Common.Option.RemainingProgramTime' => 0,
             'BSH.Common.Option.ProgramProgress' => 0,
             'LaundryCare.Washer.Option.Temperature' => 'LaundryCare.Washer.EnumType.Temperature.GC40',
-            'LaundryCare.Washer.Option.SpinSpeed' => 'LaundryCare.Washer.EnumType.SpinSpeed.RPM1400'
+            'LaundryCare.Washer.Option.SpinSpeed' => 'LaundryCare.Washer.EnumType.SpinSpeed.RPM1400',
             'LaundryCare.Washer.Option.Stains' => 0,
             'LaundryCare.Washer.Option.RinsePlus' => 0,
             'LaundryCare.Washer.Option.Prewash' => 0,
