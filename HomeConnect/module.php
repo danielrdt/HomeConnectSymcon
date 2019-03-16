@@ -210,7 +210,6 @@ class HomeConnect extends Module
                                     $this->device_settings['program'][] = $program_key;
                                     $device_programs[] = $program_value;
                                 }
-
                                 $this->devices[$device['haId']]['Settings'][] = [
                                     'key' => 'Program',
                                     'value' => $current_program,
