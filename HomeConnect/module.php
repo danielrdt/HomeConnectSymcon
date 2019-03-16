@@ -170,7 +170,8 @@ class HomeConnect extends Module
                             'value' => is_string($map['value']) ? $this->Translate($map['value']) : $map['value'],
                             'custom_profile' => isset($map['custom_profile']) ? [
                                 'values' => $map['custom_profile']
-                            ] : false
+                            ] : false,
+                            'name' => $map['name']
                         ];
                     }
 
@@ -185,7 +186,8 @@ class HomeConnect extends Module
                                     'value' => is_string($map['value']) ? $this->Translate($map['value']) : $map['value'],
                                     'custom_profile' => isset($map['custom_profile']) ? [
                                         'values' => $map['custom_profile']
-                                    ] : false
+                                    ] : false,
+                                    'name' => $map['name']
                                 ];
                             }
                         }
@@ -216,7 +218,8 @@ class HomeConnect extends Module
                                     'custom_profile' => [
                                         'icon' => 'Script',
                                         'values' => $device_programs
-                                    ]
+                                    ],
+                                    'name' => $this->Translate('Program')
                                 ];
                             }
                         }
