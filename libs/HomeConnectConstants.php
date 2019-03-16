@@ -820,7 +820,9 @@ class HomeConnectConstants
             'BSH.Common.Option.RemainingProgramTime' => 0,
             'BSH.Common.Option.ProgramProgress' => 0,
             'BSH.Common.Option.ElapsedProgramTime' => 0,
-            'BSH_Common_Option_StartInRelative' => 0 ,
+            'BSH_Common.Option.StartInRelative' => 0,
+            'BSH.Common.Option.EnergyForecast' => 0,
+            'BSH.Common.Option.WaterForecast' => 0,
             'Dishcare.Dishwasher.Option.IntensivZone'  => 0,
             'Dishcare.Dishwasher.Option.VarioSpeedPlus'  => 0,
             'Dishcare.Dishwasher.Option.BrillianceDry' => 0
@@ -875,8 +877,7 @@ class HomeConnectConstants
             'BSH.Common.Option.FinishInRelative'  => 0,
             'LaundryCare.Dryer.Option.DryingTarget' => 'LaundryCare.Dryer.EnumType.DryingTarget.IronDry',
             'LaundryCare.Dryer.Option.Gentle'  => 0,
-            'LaundryCare.Dryer.Option.WrinkleGuard'  => 0,
-            'BSH.Common.Option.FinishInRelative'  => 0
+            'LaundryCare.Dryer.Option.WrinkleGuard'  => 0
         ],
         'FridgeFreezer' => [
             'BSH.Common.Setting.PowerState' => 'BSH.Common.EnumType.PowerState.On',
