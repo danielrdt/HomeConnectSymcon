@@ -255,6 +255,11 @@ class HomeConnectConstants
      */
 
     // duration
+    const BSH_Common_Option_FinishInRelative = [
+        'name' => 'Finish',
+        'convert' => 'minute'
+    ];
+
     const BSH_Common_Option_Duration = [
         'name' => 'Duration',
         'convert' => 'minute'
@@ -496,6 +501,12 @@ class HomeConnectConstants
     const LaundryCare_Dryer_Program_Cotton = 'Cotton';
     const LaundryCare_Dryer_Program_Synthetic = 'Synthetic';
     const LaundryCare_Dryer_Program_Mix = 'Mix';
+    const LaundryCare_Dryer_Program_Hygiene = 'Hygiene';
+    const LaundryCare_Dryer_Program_Super40 = 'Super 40';
+    const LaundryCare_Dryer_Program_Outdoor = 'Outdoor';
+    const LaundryCare_Dryer_Program_Pillow = 'Pillow';
+    const LaundryCare_Dryer_Program_Blankets = 'Blankets';
+    const LaundryCare_Dryer_Program_BusinessShirts = 'Business Shirts';
 
     // drying target
     const LaundryCare_Dryer_Option_DryingTarget = [
@@ -521,6 +532,12 @@ class HomeConnectConstants
             ]
         ]
     ];
+
+    const LaundryCare_Dryer_Option_Gentle = 'Gentle';
+    const LaundryCare_Dryer_Option_WrinkleGuard = 'Wrinkle Guard';
+    const LaundryCare_Dryer_Option_Gentle = 'Gentle';
+    const LaundryCare_Dryer_Option_Gentle = 'Gentle';
+
 
     /**
      * Washer
@@ -749,14 +766,19 @@ class HomeConnectConstants
             'LaundryCare.Washer.Option.LessIroning' => 0,
             'LaundryCare.Washer.Option.IDos2DosingLevel' => 0,
             'LaundryCare.Washer.Option.IDos1DosingLevel' => 0,
-            'LaundryCare.Common.Option.VarioPerfect' => 0
+            'LaundryCare.Common.Option.VarioPerfect' => 0,
+            'BSH.Common.Option.FinishInRelative'  => 0
         ],
         'Dryer' => [
             'Start Device' => false,
             'BSH.Common.Setting.PowerState' => 'BSH.Common.EnumType.PowerState.On',
             'BSH.Common.Option.RemainingProgramTime' => 0,
             'BSH.Common.Option.ProgramProgress' => 0,
-            'LaundryCare.Dryer.Option.DryingTarget' => 'LaundryCare.Dryer.EnumType.DryingTarget.IronDry'
+            'BSH.Common.Option.FinishInRelative'  => 0,
+            'LaundryCare.Dryer.Option.DryingTarget' => 'LaundryCare.Dryer.EnumType.DryingTarget.IronDry',
+            'LaundryCare.Dryer.Option.Gentle'  => 0,
+            'LaundryCare.Dryer.Option.WrinkleGuard'  => 0,
+            'BSH.Common.Option.FinishInRelative'  => 0
         ],
         'FridgeFreezer' => [
             'BSH.Common.Setting.PowerState' => 'BSH.Common.EnumType.PowerState.On',
