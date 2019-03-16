@@ -730,9 +730,8 @@ class HomeConnectDevice extends Module
     protected function FormHead()
     {
 
-        $formHead = array_merge(
-            $formHead,
-            [
+        {
+            return [
                 [
                     'type' => 'Label',
                     'label' => '___ [ Logging ] ________________________________________________________________________________________'
@@ -742,10 +741,8 @@ class HomeConnectDevice extends Module
                     'type' => 'CheckBox',
                     'caption' => 'enable logging'
                 ]
-            ]
-        );
-
-        return $formHead;
+            ];
+        }
     }
 
     /**
