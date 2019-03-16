@@ -535,9 +535,6 @@ class HomeConnectConstants
 
     const LaundryCare_Dryer_Option_Gentle = 'Gentle';
     const LaundryCare_Dryer_Option_WrinkleGuard = 'Wrinkle Guard';
-    const LaundryCare_Dryer_Option_Gentle = 'Gentle';
-    const LaundryCare_Dryer_Option_Gentle = 'Gentle';
-
 
     /**
      * Washer
