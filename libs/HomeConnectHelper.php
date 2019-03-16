@@ -251,6 +251,36 @@ trait HomeConnectHelper
         // fallback: return false
         return false;
     }
+    /**
+     * Callback: Check Options
+     * @param $haId
+     * @return mixed
+     */
+    private function CheckOptions($haId)
+    {
+        // check if operation state=3
+        if ($operation_state_ident = $this->_getIdentifierByNeedle('Operation State')) {
+            $current_operation_state = (int)GetValue($this->GetIDForIdent($operation_state_ident[0]));
+            $request = (in_array($current_operation_state, [3])) ? 'active' : 'selected'; // 3 = Run
+        }
+        // get selected or active options
+        $program_settings = $this->Api('homeappliances/' . $haId . '/programs/' . $request);
+        if (isset($program_settings['data']['options'])) {
+            foreach ($program_settings['data']['options'] AS $option) {
+                $map = $this->_map('dummy', $option);
+                if ($idents = $this->_getIdentifierByNeedle($map['key'])) {
+                    foreach ($idents AS $ident) {
+                        $value = is_string($map['value']) ? $this->Translate($map['value']) : $map['value'];
+                        if (!is_null($value)) {
+                            SetValue($this->GetIDForIdent($ident), $value);
+                        }
+                    }
+                }
+            }
+        }
+        return true;
+    }
+
 
     /**
      * Callback: Update program
@@ -266,60 +296,13 @@ trait HomeConnectHelper
 
         // get current program settings
         if ($update !== false) {
-            $program_settings = $this->Api('homeappliances/' . $data['haId'] . '/programs/selected');
-            if (isset($program_settings['data']['options'])) {
-                foreach ($program_settings['data']['options'] AS $option) {
-                    $map = $this->_map('dummy', $option);
-
-                    if ($idents = $this->_getIdentifierByNeedle($map['key'])) {
-                        foreach ($idents AS $ident) {
-                            $value = is_string($map['value']) ? $this->Translate($map['value']) : $map['value'];
-                            if (!is_null($value)) {
-                                SetValue($this->GetIDForIdent($ident), $value);
-                            }
-                        }
-                    }
-                }
-            }
+            $this->CheckOptions($data['haId']);
         }
-
         // return update state
         return $update;
     }
 
-    /**
-     * Callback: Update options
-     * @param $data
-     * @return mixed
-     */
-    private function UpdateOptions($data)
-    {
-        // update options
-        $update = $this->Api('homeappliances/' . $data['haId'] . '/programs/active/options', [
-            'key' => $data['value']
-        ]);
 
-        // get current active options
-        if ($update !== false) {
-            $active_options = $this->Api('homeappliances/' . $data['haId'] . '/programs/active/options');
-            $this->_log('UpdateOption', $active_options);
-            if (isset($active_options['data']['options'])) {
-                foreach ($active_options['data']['options'] AS $option) {
-                    $map = $this->_map('dummy', $option);
-                    if ($idents = $this->_getIdentifierByNeedle($map['key'])) {
-                        foreach ($idents AS $ident) {
-                            $value = is_string($map['value']) ? $this->Translate($map['value']) : $map['value'];
-                            if (!is_null($value)) {
-                                SetValue($this->GetIDForIdent($ident), $value);
-                                $this->_log('UpdateOption ' . $this->GetIDForIdent($ident), $value);
-                            }
-                        }
-                    }
-                }
-            }
-        }
-        return false;
-    }
     /**
      * Callback: Start / Stop device with current program
      * @param $data
@@ -397,6 +380,47 @@ trait HomeConnectHelper
         // update data
         return $this->Api('homeappliances/' . $data['haId'] . '/settings/Refrigeration.FridgeFreezer.Setting.SuperModeRefrigerator', [
             'key' => 'Refrigeration.FridgeFreezer.Setting.SuperModeRefrigerator',
+            'value' => (bool)$data['value']
+        ]);
+    }
+
+    /**
+     * Callback: Update Brilliance Dry
+     * @param $data
+     * @return mixed
+     */
+    private function UpdateBrillianceDry($data)
+    {
+        // update data
+        return $this->Api('homeappliances/' . $data['haId'] . '/settings/Dishcare.Dishwasher.Option.BrillianceDry', [
+            'key' => 'Dishcare.Dishwasher.Option.BrillianceDry',
+            'value' => (bool)$data['value']
+        ]);
+    }
+
+    /**
+     * Callback: Update VarioSpeed Plus
+     * @param $data
+     * @return mixed
+     */
+    private function UpdateVarioSpeedPlus($data)
+    {
+        // update data
+        return $this->Api('homeappliances/' . $data['haId'] . '/settings/Dishcare.Dishwasher.Option.VarioSpeedPlus', [
+            'key' => 'Dishcare.Dishwasher.Option.VarioSpeedPlus',
+            'value' => (bool)$data['value']
+        ]);
+    }
+    /**
+     * Callback: Update IntensivZone
+     * @param $data
+     * @return mixed
+     */
+    private function UpdateIntensivZone($data)
+    {
+        // update data
+        return $this->Api('homeappliances/' . $data['haId'] . '/settings/Dishcare.Dishwasher.Option.IntensivZone', [
+            'key' => 'Dishcare.Dishwasher.Option.IntensivZone',
             'value' => (bool)$data['value']
         ]);
     }
@@ -584,3 +608,4 @@ trait HomeConnectHelper
         return $data;
     }
 }
+
