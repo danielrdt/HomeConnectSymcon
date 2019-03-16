@@ -140,6 +140,7 @@ class HomeConnectDevice extends Module
     protected function ReadConfig()
     {
         $this->haId = $this->ReadPropertyString('haId');
+        $this->settings = $this->ReadPropertyString('settings');
         if ($this->io = $this->ReadPropertyInteger('io')) {
             $this->initHomeConnect();
             $this->client_id = IPS_GetProperty($this->io, 'my_client_id');
@@ -729,6 +730,8 @@ class HomeConnectDevice extends Module
      */
     protected function FormHead()
     {
+        // read config
+        $this->ReadConfig();
 
         {
             return [
@@ -740,6 +743,16 @@ class HomeConnectDevice extends Module
                     'name' => 'log',
                     'type' => 'CheckBox',
                     'caption' => 'enable logging'
+                ],
+                [
+                    'name' => 'settings',
+                    'type' => 'ValidationTextBox',
+                    'caption' => 'Settings'
+                ],
+                [
+                    'name' => 'io',
+                    'type' => 'ValidationTextBox',
+                    'caption' => 'IO Variable'
                 ]
             ];
         }

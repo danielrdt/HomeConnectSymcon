@@ -4,7 +4,10 @@
       "": "An",
       "On": "An",
       "Off": "Aus",
+      "___ [ Settings ] _______________________________________________________________________________________": "___ [ Einstellungen ] _____________________________________________________________________________",
+
       "enable logging": "Log Meldungen aktivieren",
+      "___ [ Logging ] ________________________________________________________________________________________": "___ [ Debug Log ] ________________________________________________________________________________",
       "HomeConnectDevice connection has been established!": "HomeConnectDevice wurde verbunden!",
       "Error: Could not connect to HomeConnectModule!": "Keine Verbindung zum HomeConnectModule!",
       "Cotton": "Baumwolle",
