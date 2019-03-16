@@ -513,10 +513,6 @@ class HomeConnect extends Module
                     ],
                     [
                         'type' => 'Label',
-                        'label' => '___ [ Note ] ___________________________________________________________________________________________'
-                    ],
-                    [
-                        'type' => 'Label',
                         'label' => 'Please turn your HomeConnect devices at least into standby mode, otherwise they won\'t found.'
                     ],
                     [
