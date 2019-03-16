@@ -35,7 +35,9 @@ class HomeConnect extends Module
         'Start in' => 'Duration.StartIn',
         'Remaining' => 'Duration.Remaining',
         'Progress' => 'Progress',
-        'Fill Quantity' => 'FillQuantity'
+        'Fill Quantity' => 'FillQuantity',
+        'Energy Forecast' => 'Energy.Forecast',
+        'Water Forecast' => 'Water.Forecast'
     ];
 
     protected $icon_mappings = [
@@ -239,6 +241,8 @@ class HomeConnect extends Module
             IPS_SetProperty($instance_id, 'io', $this->InstanceID);
             if ($this->device_settings) {
                 IPS_SetProperty($instance_id, 'settings', json_encode($this->device_settings));
+                $this->_log('HomeConnect ' . $variables['ID'], json_encode($variables));
+
             }
 
             // create device variables
@@ -446,6 +450,18 @@ class HomeConnect extends Module
                 IPS_CreateVariableProfile($profile_id, 1); // integer
                 IPS_SetVariableProfileText($profile_id, '', '%');
                 IPS_SetVariableProfileIcon($profile_id, 'Distance');
+                IPS_SetVariableProfileValues($profile_id, 0, 100, 1);
+                break;
+            case 'Energy.Forecast':
+                IPS_CreateVariableProfile($profile_id, 1); // integer
+                IPS_SetVariableProfileText($profile_id, '', '%');
+                IPS_SetVariableProfileIcon($profile_id, 'Plug');
+                IPS_SetVariableProfileValues($profile_id, 0, 100, 1);
+                break;
+            case 'Water.Forecast':
+                IPS_CreateVariableProfile($profile_id, 1); // integer
+                IPS_SetVariableProfileText($profile_id, '', '%');
+                IPS_SetVariableProfileIcon($profile_id, 'Tap');
                 IPS_SetVariableProfileValues($profile_id, 0, 100, 1);
                 break;
             case 'FillQuantity':
