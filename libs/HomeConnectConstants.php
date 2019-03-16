@@ -698,7 +698,7 @@ class HomeConnectConstants
     const LaundryCare_Washer_Option_Stains = 'Stains';
     const LaundryCare_Washer_Option_RinsePlus = 'Rinse Plus';
     const LaundryCare_Washer_Option_Prewash = 'Prewash';
-    const LaundryCare_Washer_Option_VarioPerfect = 'VarioPerfect';
+    const LaundryCare_Common_Option_VarioPerfect = 'VarioPerfect';
     const LaundryCare_Washer_Option_IDos1DosingLevel = 'IDos1DosingLevel';
     const LaundryCare_Washer_Option_IDos2DosingLevel = 'IDos2DosingLevel';
     const LaundryCare_Washer_Option_LessIroning = 'Less Ironing';
