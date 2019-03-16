@@ -159,10 +159,11 @@ class HomeConnect extends Module
                     if ($current_settings = $this->Api('homeappliances/' . $device['haId'] . '/settings')) {
                         $settings = $this->_mergeSettings($settings, $current_settings);
                     }
+                    $this->_log('HomeConnect Settings', $current_settings);
 
                     // attach settings
                     foreach ($settings AS $setting) {
-                        $name = $setting['name'];
+                        //$name = $current_settings['name'];
                         $map = $this->_map($device['type'], $setting);
 
                         // append settings
@@ -172,7 +173,7 @@ class HomeConnect extends Module
                             'custom_profile' => isset($map['custom_profile']) ? [
                                 'values' => $map['custom_profile']
                             ] : false,
-                            'name' => $name
+                            //'name' => $name
                         ];
                     }
 
