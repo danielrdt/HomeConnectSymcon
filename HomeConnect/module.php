@@ -303,12 +303,11 @@ class HomeConnect extends Module
     {
         // read config
         $this->ReadConfig();
-        $redirect = $this->redirect;
 
         // build params
         $params = [
             'client_id' => $this->client_id,
-            'redirect_uri' => $redirect,
+            'redirect_uri' => $this->redirect,
             'response_type' => 'code',
             'state' => $this->InstanceID
         ];
@@ -514,6 +513,10 @@ class HomeConnect extends Module
                     ],
                     [
                         'type' => 'Label',
+                        'label' => '___ [ Note ] ___________________________________________________________________________________________'
+                    ],
+                    [
+                        'type' => 'Label',
                         'label' => 'Please turn your HomeConnect devices at least into standby mode, otherwise they won\'t found.'
                     ],
                     [
@@ -524,6 +527,11 @@ class HomeConnect extends Module
                         'name' => 'category_id',
                         'type' => 'SelectCategory',
                         'caption' => 'Category'
+                    ],
+                    [
+                        'name' => 'access_token',
+                        'type' => 'ValidationTextBox',
+                        'caption' => 'Access Token'
                     ],
                 ]
             );

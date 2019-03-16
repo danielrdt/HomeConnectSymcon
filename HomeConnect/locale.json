@@ -12,6 +12,7 @@
       "User": "Benutzer",
       "Password": "Passwort",
       "Category": "Kategorie",
+      "Access Token": "Zugangs Token HomeConnect Developer Portal",
       "%d devices found!": "%d Geräte gefunden!",
       "%d device found!": "%d Gerät gefunden!",
       "State": "Status",
