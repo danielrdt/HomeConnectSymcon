@@ -33,8 +33,6 @@
       "Brand": "Hersteller",
       "Type": "Gerätetyp",
 
-      /* System ___________________________________________________________________________________________________________________________________*/
-
       "On": "An",
       "Off": "Aus",
       "Standby": "Standby",
@@ -76,14 +74,14 @@
       "Yes": "Ja",
       "No": "Nein",
 
-      /* Oven ___________________________________________________________________________________________________________________________________*/
+
       "Oven": "Ofen",
       "Target Temperature": "Zieltemperatur",
       "Hot Air": "Umluft",
       "Top Bottom Heating": "Ober- / Unterhitze",
       "Pizza": "Pizza",
 
-      /* CoffeeMaker_____________________________________________________________________________________________________________________________*/
+
       "CoffeeMaker": "Kaffeevollautomat",
 
       "Bean Amount": "Bohnenmenge",
@@ -95,7 +93,7 @@
       "Very Strong": "Sehr Stark",
       "Coffee Temperature": "Kaffeetemperatur",
 
-      /* Dishwasher_____________________________________________________________________________________________________________________________*/
+
       "Dishwasher": "Geschirrspülmaschine",
 
       "Eco 50°": "Eco 50°",
@@ -107,7 +105,7 @@
       "Pre Rinse": "Vorspülen",
       "Machine Care": "Maschinenpflege",
 
-      /* Dryer_____________________________________________________________________________________________________________________________*/
+
       "Dryer": "Trockner",
 
       "Synthetic": "Synthetik",
@@ -125,7 +123,7 @@
       "Wrinkle Guard": "Knitterschutz",
       "Gentle": "Schontrocknen",
 
-      /* FridgeFreezer____________________________________________________________________________________________________________________________*/
+
       "FridgeFreezer": "Kühl- / Gefrierkombination",
       "Current cavity temperature change": "Aktuelle Temperatur",
       "Target Temperature Freezer": "Zieltemperatur Gefrierschrank",
@@ -133,7 +131,7 @@
       "Super Mode Freezer": "Super Modus Gefrierschrank",
       "Super Mode Refrigerator": "Super Modus Kühlschrank",
 
-      /* Washer_____________________________________________________________________________________________________________________________*/
+
       "Washer": "Waschmaschine",
 
       "400 rpm": "400 U/Min",

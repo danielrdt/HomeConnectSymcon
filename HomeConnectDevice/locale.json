@@ -9,7 +9,6 @@
       "HomeConnectDevice connection has been established!": "HomeConnectDevice wurde verbunden!",
       "Error: Could not connect to HomeConnectModule!": "Keine Verbindung zum HomeConnectModule!",
 
-      /* System ___________________________________________________________________________________________________________________________________*/
 
       "": "An",
       "On": "An",
@@ -35,13 +34,10 @@
       "Request cannot be performed since OperationState is not Ready; Request cannot be performed since an active program is set": "Es läuft noch ein Programm oder das Gerät ist nicht betriebsbereit!",
 
 
-      /* Oven ___________________________________________________________________________________________________________________________________*/
-
       "Hot Air": "Umluft",
       "Top Bottom Heating": "Ober- / Unterhitze",
       "Pizza": "Pizza",
 
-      /* Dryer ___________________________________________________________________________________________________________________________________*/
 
       "Synthetic": "Synthetik",
       "Hygiene": "Hygiene",
@@ -58,7 +54,6 @@
       "Wrinkle Guard": "Knitterschutz",
       "Gentle": "Schontrocknen",
 
-      /* Coffeemaker______________________________________________________________________________________________________________________________*/
 
       "Coffee": "Kaffee",
       "Mild": "Mild",
@@ -66,7 +61,6 @@
       "Strong": "Stark",
       "Very Strong": "Sehr Stark",
 
-      /* Washer __________________________________________________________________________________________________________________________________*/
 
       "400 rpm": "400 U/Min",
       "600 rpm": "600 U/Min",
@@ -99,8 +93,6 @@
       "Auto60": "Buntwäsche 60°",
       "Sensitive": "Feinwäsche",
       "Curtains": "Vorhänge",
-
-      /* Dishwasher ___________________________________________________________________________________________________________________________________*/
 
       "Eco 50°": "Eco 50°",
       "Quick 45°": "Schnell 45°",
