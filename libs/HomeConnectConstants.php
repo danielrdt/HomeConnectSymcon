@@ -13,19 +13,19 @@ class HomeConnectConstants
                 'value' => [
                     'name' => 'Off',
                     'value' => 0
-                ],
+                ]/*,
                 'availability' => [
                     'Dishwasher',
                     'Top',
                     'Hood'
-                ]
+                ]*/
             ],
             'BSH.Common.EnumType.PowerState.On' => [
                 'value' => [
                     'name' => 'On',
                     'value' => 1,
                 ]
-            ],
+            ]/*,
             'BSH.Common.EnumType.PowerState.Standby' => [
                 'value' => [
                     'name' => 'Standby',
@@ -35,7 +35,7 @@ class HomeConnectConstants
                     'Oven',
                     'CoffeeMaker'
                 ]
-            ]
+            ]*/
         ]
     ];
 
@@ -698,10 +698,10 @@ class HomeConnectConstants
     const LaundryCare_Washer_Option_Stains = 'Stains';
     const LaundryCare_Washer_Option_RinsePlus = 'Rinse Plus';
     const LaundryCare_Washer_Option_Prewash = 'Prewash';
-    const LaundryCare_Common_Option_VarioPerfect = 'VarioPerfect';
     const LaundryCare_Washer_Option_IDos1DosingLevel = 'IDos1DosingLevel';
     const LaundryCare_Washer_Option_IDos2DosingLevel = 'IDos2DosingLevel';
     const LaundryCare_Washer_Option_LessIroning = 'Less Ironing';
+    const LaundryCare_Common_Option_VarioPerfect = 'VarioPerfect';
 
     /**
      * Hood
