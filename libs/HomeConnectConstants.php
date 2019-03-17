@@ -493,6 +493,42 @@ class HomeConnectConstants
         ]
     ];
 
+    const Dishcare_Dishwasher_Option_HalfLoad = [
+        'name' => 'Half Load',
+        'values' => [
+            true => [
+                'value' => [
+                    'name' => 'Yes',
+                    'value' => 1
+                ]
+            ],
+            false => [
+                'value' => [
+                    'name' => 'No',
+                    'value' => 0
+                ]
+            ]
+        ]
+    ];
+
+    const Dishcare_Dishwasher_Option_HygienePlus = [
+        'name' => 'Hygiene Plus',
+        'values' => [
+            true => [
+                'value' => [
+                    'name' => 'Yes',
+                    'value' => 1
+                ]
+            ],
+            false => [
+                'value' => [
+                    'name' => 'No',
+                    'value' => 0
+                ]
+            ]
+        ]
+    ];
+
     /**
      * Dryer
      */
@@ -848,7 +884,9 @@ class HomeConnectConstants
             'BSH.Common.Option.WaterForecast' => 0,
             'Dishcare.Dishwasher.Option.IntensivZone'  => 0,
             'Dishcare.Dishwasher.Option.VarioSpeedPlus'  => 0,
-            'Dishcare.Dishwasher.Option.BrillianceDry' => 0
+            'Dishcare.Dishwasher.Option.BrillianceDry' => 0,
+            'Dishcare.Dishwasher.Option.HalfLoad' => 0,
+            'Dishcare.Dishwasher.Option.HygienePlus' => 0
         ],
         'Hood' => [
             'Start Device' => false,
