@@ -730,7 +730,7 @@ class HomeConnectConstants
             'LaundryCare.Washer.EnumType.Stains.On' => [
                 'value' => [
                     'name' => 'On',
-                    'value' => 0
+                    'value' => 1
                 ]
             ]
         ]
@@ -747,7 +747,7 @@ class HomeConnectConstants
             'LaundryCare.Washer.EnumType.RinsePlus.On' => [
                 'value' => [
                     'name' => 'On',
-                    'value' => 0
+                    'value' => 1
                 ]
             ]
         ]
