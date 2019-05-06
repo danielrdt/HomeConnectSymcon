@@ -543,6 +543,7 @@ class HomeConnectConstants
     const LaundryCare_Dryer_Program_Pillow = 'Pillow';
     const LaundryCare_Dryer_Program_Blankets = 'Blankets';
     const LaundryCare_Dryer_Program_BusinessShirts = 'Business Shirts';
+    const LaundryCare_Dryer_Program_Towels = 'Towels';
 
     // drying target
     const LaundryCare_Dryer_Option_DryingTarget = [

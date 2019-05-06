@@ -251,6 +251,32 @@ trait HomeConnectHelper
         // fallback: return false
         return false;
     }
+
+    /**
+     * Callback: Check Status
+     * @param $haId
+     * @return mixed
+     */
+    private function CheckStatus($haId)
+    {
+        // get selected or active options
+        $status = $this->Api('homeappliances/' . $haId . '/status');
+        if (isset($status)) {
+            foreach ($status AS $state) {
+                $map = $this->_map('dummy', $state);
+                if ($idents = $this->_getIdentifierByNeedle($map['key'])) {
+                    foreach ($idents AS $ident) {
+                        $value = is_string($map['value']) ? $this->Translate($map['value']) : $map['value'];
+                        if (!is_null($value)) {
+                            SetValue($this->GetIDForIdent($ident), $value);
+                        }
+                    }
+                }
+            }
+        }
+        return true;
+    }
+
     /**
      * Callback: Check Options
      * @param $haId
@@ -455,6 +481,8 @@ trait HomeConnectHelper
      */
     private function ProcessFinishedCallback()
     {
+        $this->CheckStatus($this->haId);
+
         // set program start to false
         if ($ident = $this->_getIdentifierByNeedle('Start Device')) {
             SetValue($this->GetIDForIdent($ident[0]), false);
@@ -467,9 +495,15 @@ trait HomeConnectHelper
             }
         }
 
-        // set progress to 100%
-        if ($ident = $this->_getIdentifierByNeedle('Progress')) {
-            SetValue($this->GetIDForIdent($ident[0]), 100);
+        if ($ident = $this->_getIdentifierByNeedle('Operation State')) {
+            if(GetValue($this->GetIDForIdent($ident[0])) == 3){
+                // set finished
+                SetValue($this->GetIDForIdent($ident[0]), 9);
+                // set progress to 100%
+                if ($ident2 = $this->_getIdentifierByNeedle('Progress')) {
+                    SetValue($this->GetIDForIdent($ident2[0]), 100);
+                }
+            }
         }
 
         $this->_log('HomeConnect Callback', __FUNCTION__ . ' executed');

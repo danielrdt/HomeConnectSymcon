@@ -377,8 +377,16 @@ class HomeConnectDevice extends Module
                             $this->CheckVariables();
                             break;
                         // update Option variables
-                        case 'BSH.Common.Root.ActiveProgram';
                         case 'BSH.Common.Option.RemainingProgramTime';
+                            if ($operation_state_ident = $this->_getIdentifierByNeedle('Operation State')) {
+                                if((int)GetValue($this->GetIDForIdent($operation_state_ident[0])) <> 3){
+                                    //Seems that a programm is running but we have missed the state Change -> get it
+                                    $this->CheckStatus($this->haId);
+                                }
+                            }
+                            break;
+                        case 'BSH.Common.Root.ActiveProgram';
+                            $this->CheckStatus($this->haId);
                             $this->CheckOptions($this->haId);
                         default:
                             $callbacks = HomeConnectConstants::callbacks;
