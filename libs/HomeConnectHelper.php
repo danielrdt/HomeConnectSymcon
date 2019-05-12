@@ -498,7 +498,7 @@ trait HomeConnectHelper
         if ($ident = $this->_getIdentifierByNeedle('Operation State')) {
             if(GetValue($this->GetIDForIdent($ident[0])) == 3){
                 // set finished
-                SetValue($this->GetIDForIdent($ident[0]), 9);
+                SetValue($this->GetIDForIdent($ident[0]), 6);
                 // set progress to 100%
                 if ($ident2 = $this->_getIdentifierByNeedle('Progress')) {
                     SetValue($this->GetIDForIdent($ident2[0]), 100);
