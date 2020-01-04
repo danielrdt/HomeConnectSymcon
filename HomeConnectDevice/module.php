@@ -147,6 +147,11 @@ class HomeConnectDevice extends Module
         $this->settings = $this->ReadPropertyString('settings');
         if ($this->io = $this->ReadPropertyInteger('io')) {
             $this->initHomeConnect();
+            $ioState = IPS_GetInstance($this->io)['InstanceStatus'];
+            if($ioState != 102){
+                $this->LogMessage("Skip loading IO properties because IO Instance not active ($ioState)", KL_WARNING);
+                return;
+            }
             $this->client_id = IPS_GetProperty($this->io, 'my_client_id');
             // set tokens
             $this->access_token = IPS_GetProperty($this->io, 'access_token');
