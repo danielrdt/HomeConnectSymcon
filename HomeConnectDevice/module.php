@@ -84,13 +84,17 @@ class HomeConnectDevice extends Module
      */
     protected function IOChangeState(int $State)
     {
-        if ($State == IS_ACTIVE) {
-            $this->State = TLSState::Init;
-            $this->ConnectEvent(true);
-        } else if ($State == IS_INACTIVE) {
-            $this->State = TLSState::Init;
-            $this->Multi_TLS = NULL;
-        }
+        try{
+            if ($State == IS_ACTIVE) {
+                $this->State = TLSState::Init;
+                $this->ConnectEvent(true);
+            } else if ($State == IS_INACTIVE) {
+                $this->State = TLSState::Init;
+                $this->Multi_TLS = NULL;
+            }
+        }catch(Exception $ex){
+            $this->LogMessage("Failed to process Parent IO State change".$ex->GetMessage(), KL_ERROR);
+        }   
     }
 
     /**
