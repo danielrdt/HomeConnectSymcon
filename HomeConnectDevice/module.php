@@ -783,7 +783,7 @@ class HomeConnectDevice extends Module
                 [
                     'type' => 'Button',
                     'label' => 'Connect Event',
-                    'onClick' => $this->_getPrefix() . '_ConnectEvent($id, true)',
+                    'onClick' => $this->_getPrefix() . '_ConnectEvent($id, true);',
                 ]
             ];
         }
