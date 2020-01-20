@@ -35,12 +35,14 @@ class Module extends IPSModule
         parent::Destroy();
 
         // remove instance profiles
+        /* Skip Destroy Profiles to make Update possible without recreation of devices
         $profiles = IPS_GetVariableProfileList();
         foreach ($profiles AS $profile) {
             if (strstr($profile, $this->prefix . '.' . $this->InstanceID)) {
                 IPS_DeleteVariableProfile($profile);
             }
         }
+        */
     }
 
     /**
